@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="并发测试套件" parallel="methods" thread-count="3">
+    <!--
+        parallel 可选值：
+          - methods: 方法级并发（最常用）测试方法必须是线程安全的，不能依赖共享状态（如静态变量），否则可能导致不可预测的结果
+                     所有用例都可以在不同的线程下去执行；thread-count最大并发线程数；xml文件配置不能指定线程池，只有方法上可指定线程池
+          - tests: <test> 标签级并发
+                     相同test tag下的用例在相同的线程下执行
+                     不同test tag下的用例可以在不同线程下执行
+
+          - classes: 类级并发
+                     相同的class tag下的用例在同一个线程中执行
+                     不同的class tag下的用例可以在不同的线程中执行
+          - instances: 实例级并发
+    -->
+    <test name="商品测试">
+        <classes>
+            <class name="com.course.testng.thread.ProductTest"/>
+        </classes>
+    </test>
+</suite>
