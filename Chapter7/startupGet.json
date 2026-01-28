@@ -1,0 +1,54 @@
+[
+  {
+    "description": "模拟一个无参数的get请求",
+    "request": {
+      "uri": "/getdemo",
+      "method": "get"
+    },
+    "response": {
+      "text": "这是一个无参数的get请求"
+    }
+  },
+  {
+    "description": "模拟一个带参数的get请求",
+    "request": {
+      "uri": "/getwithparam",
+      "method": "get",
+      "queries": {
+        "name": "huansan",
+        "age": "20"
+      }
+    },
+    "response": {
+      "text": "我huansan又回来啦!"
+    }
+  },
+  {
+    "description": "模拟有参get请求，返回json数据",
+    "request": {
+      "uri": "/user",
+      "method": "get",
+      "queries": {
+        "id": "123",
+        "name": "张三"
+      }
+    },
+    "response": {
+      "json": {
+        "code": 200,
+        "data": {
+          "id": 123,
+          "name": "张三",
+          "age": 25
+        }
+      },
+      "headers": {
+        "Content-Type": "application/json;charset=UTF-8"
+      }
+
+    }
+
+
+  }
+
+]

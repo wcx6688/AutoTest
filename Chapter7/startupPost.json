@@ -1,0 +1,42 @@
+[
+  {
+
+    "description": "模拟json格式的post请求",
+    "request": {
+      "uri": "/api/login",
+      "method": "post",
+      "json": {
+        "username": "zhangsan",
+        "password": "123456"
+      }
+    },
+    "response": {
+      "json": {
+        "code": 200,
+        "message": "登录成功",
+        "token": "abc123xyz"
+      },
+      "headers": {
+        "Content-Type": "application/json;charset=UTF-8"
+      }
+    }
+  },{
+
+  "description": "模拟form表单格式的post请求",
+  "request": {
+    "uri": "/submit",
+    "method": "post",
+    "forms": {
+      "name": "张三",
+      "age": "25"
+    }
+  },
+  "response": {
+    "message": "收到表单：姓名=张三，年龄=25",
+    "headers": {
+      "Content-Type": "text/plain;charset=UTF-8"
+    }
+
+  }
+}
+]

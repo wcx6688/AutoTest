@@ -1,0 +1,43 @@
+[
+  {
+    "description": "模拟一个带cookies信息的get请求",
+    "request": {
+      "uri": "/api/user",
+      "method": "get",
+      "headers": {
+        "Cookie": "sessionid=abc123"
+      }
+    },
+    "response": {
+      "status": 200,
+      "json": {
+        "message": "这是带cookies信息的get请求",
+        "username": "zhangsan",
+        "role": "admin"
+      }
+    }
+  },
+  {
+    "description": "模拟带cookies信息的post请求",
+    "request": {
+      "uri": "/api/login",
+      "method": "post",
+      "headers": {
+        "Cookie": "lang=en"
+      },
+      "json": {
+        "username": "test",
+        "password": "123456"
+      }
+
+    },
+    "response": {
+      "status": 200,
+      "json": {
+        "message":"这是带cookies信息的post请求,登录成功",
+        "token": "xyz789"
+      }
+    }
+
+  }
+]
